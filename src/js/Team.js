@@ -9,7 +9,8 @@ export default class Team {
 
     add(player) {
         if (!this.members.has(player)) this.members.add(player);
-        return 'Персонаж уже существует';
+        else return 'Персонаж уже существует';
+        return true;
     }
 
     addAll(...players) {
