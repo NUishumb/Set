@@ -17,7 +17,7 @@ test('should throw error', () => {
     const char = new Character('abc', 'Bowman');
     const team = new Team();
     team.add(char);
-    expect(team.add(char)).toBe('Персонаж уже существует');
+    expect(() => team.add(char)).toThrow('Персонаж уже существует');
 });
 
 test('should add multiple characters', () => {
